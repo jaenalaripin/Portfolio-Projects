@@ -8,7 +8,7 @@ Jaenal Aripin
 Cyclistic is a bike-share program that features more than 5,800 bicycles
 and 600 docking stations. Cyclistic sets itself apart by also offering
 reclining bikes, hand tricycles, and cargo bikes, making bike-share more
-inclusive to people with disabilitiesad riders who can’t use a standard
+inclusive to people with disabilities and riders who can’t use a standard
 two-wheeled bike. The majority of riders opt fort aditional bikes; about
 8% of riders use the assistive options. Cyclistic users are more likely
 to ride for leisure, but about 30% use the bikes to commute to work each
@@ -42,14 +42,11 @@ annual members. This analysis will help you answer this question:
 We used Cyclistic’s historical trip data to analyze and identify trends.
 We downloaded the previous 12 months of Cyclistic trip data
 [here](https://divvy-tripdata.s3.amazonaws.com/index.html). (Note: The
-datasets have a different name because Cyclistic is a fictional company.
-For the purposes of this case study, the datasets are appropriate and
-will enable us to answer the business questions. The data has been made
+datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable us to answer the business questions. The data has been made
 available by Motivate International Inc. under this
 [license](https://divvybikes.com/data-license-agreement).) We downloaded
 only the data sets from 2019. The data are divided into 4 quarters per
-year. In this analysis, we only include the transaction report in 2019,
-which spread to 4 separate data sets (Q1, Q2, Q3, and Q4).
+year (Q1, Q2, Q3, and Q4).
 
 <a id="cell3"></a>
 
@@ -158,9 +155,8 @@ glimpse(bike20194)    #checking the structure of Q4 data set
     ## $ gender            <chr> "Male", "Male", "Female", "Male", "Male", "Female", …
     ## $ birthyear         <dbl> 1987, 1998, 1991, 1990, 1987, 1994, 1991, 1995, 1993…
 
-All data sets consist of twelve columns and the same value type from all
-of them, but we see that only the Q2 data set contains different column
-names, which does not allow us to join the data sets. Q2 data set has
+All data sets consist of twelve columns, all the columns from all the dataeets are the same, but we see that only the Q2 that contains different column
+names, which does not allow us to join them. Q2 dataset has
 column names with spaces and capital letters. We need to perform
 `clean_names` function from `janitor` package to transform the column
 names.
@@ -274,7 +270,7 @@ summary(bike2019)        #view statistical values of the data set
 We see a weird number in the **birthyear** column. The minimum value in
 the **birthyear** column is *1759*. We can call this an outlier because
 people who were born in 1759 would not exist in this century. We also
-can see the maximum value in the **trip duration** column is *10628400*,
+can see the maximum value in the **tripduration** column is *10628400*,
 meaning that someone rents the bike for *2952* hours. This is an
 outlier, too.
 
