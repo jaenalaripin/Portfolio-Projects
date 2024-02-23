@@ -568,7 +568,7 @@ the riding for longer time in a day.
 We use treemap chart to show the distribution of genders. To perform
 this action, we need `treemapify` package.
 
-![]([Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/treemap%20of%20genders-1.png](https://i.imgur.com/yZuS4Ir.png))<!-- -->
+![](https://i.imgur.com/yZuS4Ir.png)<!-- -->
 
 Both types of users have males doing more transactions than females,
 especially for annual members. Riding bikes is not the best option for
