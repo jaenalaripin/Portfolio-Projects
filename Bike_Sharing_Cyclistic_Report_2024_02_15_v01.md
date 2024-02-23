@@ -1,9 +1,32 @@
-Bike-Share Cyclistic Data Analysis
+Bike-Share Cyclistic Data Analysis With R
 ================
+Jaenal Aripin
+2024-02-15
 
 ![](https://i.imgur.com/HyU3U5b.png)
 
-### 1. Business Task
+Cyclistic is a bike-share program that features more than 5,800 bicycles
+and 600 docking stations. Cyclistic sets itself apart by also offering
+reclining bikes, hand tricycles, and cargo bikes, making bike-share more
+inclusive to people with disabilitiesad riders who can’t use a standard
+two-wheeled bike. The majority of riders opt fort aditional bikes; about
+8% of riders use the assistive options. Cyclistic users are more likely
+to ride for leisure, but about 30% use the bikes to commute to work each
+day.
+
+## Table of Contents
+
+- [1. Business Task](#cell1)<br>
+- [2. Data Source](#cell2)<br>
+- [3. Cleaning and Manipulation of Data](#cell3)<br>
+- [4. Analysis](#cell4)<br>
+- [5. Visualizations](#cell5)<br>
+- [6. Key Findings](#cell6)<br>
+- [7. Recommendations](#cell7)<br>
+
+<a id="cell1"></a>
+
+## 1. Business Task
 
 Cyclistic have two types of users. First one is casual users that
 includes single-ride and full-day passes users and the second one is
@@ -12,7 +35,9 @@ annual members. This analysis will help you answer this question:
 - How do annual members and casual riders use Cyclistic bikes
   differently?
 
-### 2. Data Source
+<a id="cell2"></a>
+
+## 2. Data Source
 
 We used Cyclistic’s historical trip data to analyze and identify trends.
 We downloaded the previous 12 months of Cyclistic trip data
@@ -26,9 +51,11 @@ only the data sets from 2019. The data are divided into 4 quarters per
 year. In this analysis, we only include the transaction report in 2019,
 which spread to 4 separate data sets (Q1, Q2, Q3, and Q4).
 
-### 3. Cleaning and Manipulation of Data
+<a id="cell3"></a>
 
-#### 3.1. Importing Data Sets
+## 3. Cleaning and Manipulation of Data
+
+### 3.1. Importing Data Sets
 
 Our datasets are not clean. We have to perform some cleaning and
 manipulation processes so they can be used for further analysis.
@@ -48,7 +75,7 @@ bike20193 <- read_csv("F:/Data Analytics/Case Studies/Bike Share/R/Divvy_Trips_2
 bike20194 <- read_csv("F:/Data Analytics/Case Studies/Bike Share/R/Divvy_Trips_2019_Q4.csv")       #importing dataset of Q4
 ```
 
-#### 3.2. Cleaning Data Sets
+### 3.2. Cleaning Data Sets
 
 These four files need to be merged into one data set for further
 analysis. Before that, we need to check the preview of each data set
@@ -180,7 +207,8 @@ bike20192 <-                                                                 #Re
          birthyear = x05_member_details_member_birthday_year)
 ```
 
-Here’s the preview of Q2 table after the column names have been renamed.
+Here is the preview of Q2 table after the column names have been
+renamed.
 
 ``` r
 colnames(bike20192)       #checking the column names                                                     
@@ -200,7 +228,7 @@ bike2019 <- union_all(bike2019, bike20193)          #joining Q1,Q2 and Q3
 bike2019 <- union_all(bike2019, bike20194)          #joining Q1,Q2,Q3, and Q4
 ```
 
-#### 3.3. Checking Outliers, Duplicates, Typos and Null Values
+### 3.3. Checking Outliers, Duplicates, Typos and Null Values
 
 Now all the data sets have been joined. The next step is to find any
 outliers, typos and null values in the data set. Here, we want to
@@ -261,7 +289,7 @@ bike2019 <-
                       tripduration < 24*3600)   #filtering the data set from outliers
 ```
 
-Now, we’re checking the duplicates and typos using this code:
+Now, we are checking the duplicates and typos using this code:
 
 ``` r
 kable(sum(duplicated(bike2019$trip_id)))                #trip_id should be unique, so no duplicates are allowed in this column
@@ -324,9 +352,11 @@ bike2019 <-                            #excluding null from the data set
   drop_na()
 ```
 
-### 4. Analysis
+<a id="cell4"></a>
 
-#### 4.1. Adding Days, Months, and Age Columns
+## 4. Analysis
+
+### 4.1. Adding Days, Months, and Age Columns
 
 Creating new columns like **days**, **months**, and **ages** will help
 us understand the data better. With the **days** column, we can observe
@@ -357,7 +387,7 @@ kable(head(bike2019 %>% select(ages, days, months)))           #preview of the n
 |   30 | Tue  | Jan    |
 |   41 | Tue  | Jan    |
 
-#### 4.2. Calculating Total Transactions by Months
+### 4.2. Calculating Total Transactions by Months
 
 Calculating total transactions by months and days allows us to plot them
 into distribution charts, like histogram. We create a new table with
@@ -381,7 +411,7 @@ kable(head(biketransactionheatmap))
 | Annual Member | Jan    | Thu  | 19493 |
 | Annual Member | Jan    | Fri  | 18194 |
 
-#### 4.3. Calculating Total Duration Users Spent on Riding Bike
+### 4.3. Calculating Total Duration Users Spent on Riding Bike
 
 Calculating this variable allows us to compare how long the types of
 users ride bikes. We use this code to perform the calculation:
@@ -403,7 +433,7 @@ kable(head(bike2019durationday))
 | Annual Member | Thu  | 12.61987 |
 | Annual Member | Fri  | 12.51331 |
 
-#### 4.4. Calculating Distribution of Age
+### 4.4. Calculating Distribution of Age
 
 This allows us to see which age group uses Cyclistic the most.
 
@@ -425,7 +455,7 @@ kable(head(bike2019ages))
 | Annual Member |   24 | 11369 |
 | Annual Member |   25 | 13926 |
 
-#### 4.5. Calculating Time Distribution
+### 4.5. Calculating Time Distribution
 
 This will show us the hours people mainly use Cyclistic.
 
@@ -475,7 +505,7 @@ kable(head(bike2019hour))
 | Sun  | 02:00      | Annual Member |  1631 |
 | Sun  | 02:00      | Casual        |   297 |
 
-#### 4.6. Calculating Distribution of Genders
+### 4.6. Calculating Distribution of Genders
 
 Knowing the distribution of genders is important to draw the best
 decision to advertise the app.To calculate the distribution of genders
@@ -497,40 +527,42 @@ kable(head(bikegender))
 | Male   | Annual Member | 2187020 |
 | Male   | Casual        |  212502 |
 
-### 5. Visualizations
+<a id="cell5"></a>
+
+## 5. Visualizations
 
 We have done the cleaning and analysis steps. Now, we can visualize the
 processed data. We have some charts that can give you insight about what
 happen in the raw data. We use `ggplot2` from `tidyverse` to plot the
 data into charts.
 
-#### 5.1. Distribution of Transactions
+### 5.1. Distribution of Transactions
 
 This chart show us clearer information about distribution of Cyclistic
 transaction in 2019. Most transactions have been done between April and
 October.
 
-![](https://i.imgur.com/y8OwNri.png)<!-- -->
+![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20transactions-1.png)<!-- -->
 
 November is the last month of the autumn season. The air starts cooling
 down and makes bike riding not the best option for commuting. Based on
 the chart, casual users started not to use Cyclistic as their main
 option, but we see there are still lots of transactions made by the
 annual members even until the end of the year. Annual members pay the
-membership so they can use Cyclistic throughout the year, so they don’t
+membership so they can use Cyclistic throughout the year, so they do not
 want to miss their opportunity to leverage the benefits of the package
 they bought. Even in January-April, when the winter occurs, there are
 still a few transactions made. Casual users only pay for the service
 either for single-ride passes or full-day passes. When the winter comes,
 they prefer to choose other ways to commute.
 
-#### 5.2. Heatmap of Time
+### 5.2. Heatmap of Time
 
 We know what months the users mainly use the app. This chart will show
 us the difference between annual members’ and casual users’ behavior
 based on time.
 
-![](https://i.imgur.com/IaHULAh.png)<!-- -->![](https://i.imgur.com/AoKwvlQ.png)<!-- -->
+![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-1.png)<!-- -->![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-2.png)<!-- -->
 
 Annual members mainly use Cyclistic on the weekdays at 07:00-08:00 and
 16:00-19:00, while casual users mainly use the app on the weekends at
@@ -539,21 +571,21 @@ commuting to work, while casual users mainly use Cyclistic for other
 purposes. We can say that Cyclistic members are mainly workers, while
 casual users are vary.
 
-#### 5.3. Distribution of Users’ Age
+### 5.3. Distribution of Users’ Age
 
 This chart will inform us about the age distribution between the two
 types of users.
 
-![](https://i.imgur.com/Uv2lfoK.png)<!-- -->
+![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/distributions%20of%20users%20age-1.png)<!-- -->
 
 Both types of users have the same age distribution. Most Cyclistic users
 are aged between 25 - 35.
 
-#### 5.4. Average Trip Duration
+### 5.4. Average Trip Duration
 
 This chart shows us average ride duration of the users.
 
-![](https://i.imgur.com/iJQN94F.png)<!-- -->
+![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/tripduration-1.png)<!-- -->
 
 Although casual users use the app less frequently than annual members,
 they ride the bike longer. Most annual members are workers; they use
@@ -563,12 +595,15 @@ Casual users ride bikes for farther distance, because they pay the
 service for just one day or single trip, they leverage the benefits of
 the riding for longer time in a day.
 
-#### 5.5. Genders
+### 5.5. Genders
 
 We use treemap chart to show the distribution of genders. To perform
 this action, we need `treemapify` package.
 
-![](https://i.imgur.com/yZuS4Ir.png)<!-- -->
+    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+    ## family not found in Windows font database
+
+![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/treemap%20of%20genders-1.png)<!-- -->
 
 Both types of users have males doing more transactions than females,
 especially for annual members. Riding bikes is not the best option for
@@ -577,13 +612,15 @@ Females pay more attention to their appearance than males. Males also
 work in more sectors than females. Females mostly are white-collar
 workers, while some males also work as blue-collar workers.
 
+<a id="cell6"></a>
+
 ## 6. Key Findings
 
 - Cyclistic is used mainly between April and October. Seasons affect the
   number of transactions. People, especially casual users, mainly use
   Cyclistic in spring and summer.
 - Annual members use Cyclistic more often throughout the year because
-  they pay the yearly membership. They don’t want to miss their
+  they pay the yearly membership. They do not want to miss their
   opportunity to leverage the benefits of the package they bought.
 - Annual members use Cyclistic mainly on weekdays from 07:00 to 08:00
   and 16:00 to 19:00, when people go to work or home. They mostly use
@@ -601,6 +638,8 @@ workers, while some males also work as blue-collar workers.
   benefits of riding for longer periods of time in a day.
 - Males have used Cyclistic more frequently than females, but casual
   users have the female portion slightly bigger.
+
+<a id="cell7"></a>
 
 ## 7. Recommendations
 
