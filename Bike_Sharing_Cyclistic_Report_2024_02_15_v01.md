@@ -277,10 +277,10 @@ bike2019 <-
                       tripduration < 24*3600)   #filtering the data set from outliers
 ```
 
-Now, we are checking the duplicates and typos using this code:
+Next, we look for the duplicates and typos using this code:
 
 ``` r
-kable(sum(duplicated(bike2019$trip_id)))                #trip_id should be unique, so no duplicates are allowed in this column
+kable(sum(duplicated(bike2019)))                #checking duplicates
 ```
 
 |   x |
@@ -306,10 +306,11 @@ kable(head(bike2019 %>% distinct(gender)))                    #checking values i
 | Female |
 | NA     |
 
-There are no duplicates in **trip_id** column. There are two types of
-users in **usertype**, which are *customer* and *subscriber*. There are
-null values in **gender** column. In this analysis, we call *customer*
-as *casual*, and *subscriber* as *annual member*, therefore, we need to
+* There are no duplicates in **trip_id** column.
+* There are two types of users in **usertype**, which are *customer* and *subscriber*.
+* There are null values in **gender** column.
+
+In this analysis, we call *customer* as *casual*, and *subscriber* as *annual member*, therefore, we need to
 rename the **usertype** values with `mutate` function from the `dplyr`
 package:
 
@@ -331,8 +332,8 @@ kable(head(bike2019))
 | 21742447 | 2019-01-01 00:14:52 | 2019-01-01 00:20:56 |   1170 |          364 |             173 | Mies van der Rohe Way & Chicago Ave |            35 | Streeter Dr & Grand Ave         | Annual Member | Male   |      1994 |
 | 21742448 | 2019-01-01 00:15:33 | 2019-01-01 00:19:09 |   2437 |          216 |              98 | LaSalle St & Washington St          |            49 | Dearborn St & Monroe St         | Annual Member | Female |      1983 |
 
-We see null values in the **gender** column. We can exclude these null
-values with the code below.
+We see null values in the **gender** column. We exclude these null
+values from the dataset with the code below.
 
 ``` r
 bike2019 <-                            #excluding null from the data set
@@ -347,12 +348,13 @@ bike2019 <-                            #excluding null from the data set
 ### 4.1. Adding Days, Months, and Age Columns
 
 Creating new columns like **days**, **months**, and **ages** will help
-us understand the data better. With the **days** column, we can observe
-on which days people usually use Cyclistic, both for annual members and
-casual users. With the **ages** column, we can show the range of ages
-that use Cyclistic the most. We can use the **months** column to see the
-distribution of Cyclistic transactions throughout the year. We can add
-these columns with `mutate` function from the `dplyr` package and use
+us understand the data better. 
+
+* **days** column, we can observe on which days people usually use Cyclistic.
+* **ages** column, we can show the distribution of age groups. 
+* **months** column to see the throughout the year.
+
+We create these columns with `mutate` function from the `dplyr` package and use
 the `lubridate` package to extract months and days from the
 **start_time** column:
 
@@ -379,7 +381,7 @@ kable(head(bike2019 %>% select(ages, days, months)))           #preview of the n
 
 Calculating total transactions by months and days allows us to plot them
 into distribution charts, like histogram. We create a new table with
-this code so we can plot them later on in a chart:
+the code below:
 
 ``` r
 biketransactionheatmap <-                    #calculating transactions by months and days, will be used to plot a heatmap chart
@@ -401,8 +403,7 @@ kable(head(biketransactionheatmap))
 
 ### 4.3. Calculating Total Duration Users Spent on Riding Bike
 
-Calculating this variable allows us to compare how long the types of
-users ride bikes. We use this code to perform the calculation:
+Calculating this variable allows us to compare the total durations of these two user types. We use this code to perform the calculation:
 
 ``` r
 bike2019durationday <-                        #calculating average trip duration by days
@@ -445,7 +446,7 @@ kable(head(bike2019ages))
 
 ### 4.5. Calculating Time Distribution
 
-This will show us the hours people mainly use Cyclistic.
+After this calculation, we can determine the time that the users mostly ride the bikes from Cyclistic
 
 ``` r
 bike2019hour <-
@@ -532,8 +533,8 @@ October.
 
 ![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20transactions-1.png)<!-- -->
 
-November is the last month of the autumn season. The air starts cooling
-down and makes bike riding not the best option for commuting. Based on
+November is the last month of the autumn season. The temperature are getting colder
+and it makes bike riding not the best option for commuting. Based on
 the chart, casual users started not to use Cyclistic as their main
 option, but we see there are still lots of transactions made by the
 annual members even until the end of the year. Annual members pay the
