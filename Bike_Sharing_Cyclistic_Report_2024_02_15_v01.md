@@ -446,7 +446,7 @@ kable(head(bike2019ages))
 
 ### 4.5. Calculating Time Distribution
 
-After this calculation, we can determine the time that the users mostly ride the bikes from Cyclistic
+After this calculation, we can see at what time users mainly use Cyclistic.
 
 ``` r
 bike2019hour <-
@@ -546,8 +546,7 @@ they prefer to choose other ways to commute.
 
 ### 5.2. Heatmap of Time
 
-We know what months the users mainly use the app. This chart will show
-us the difference between annual members’ and casual users’ behavior
+This chart will show us the difference between annual members’ and casual users’ behavior
 based on time.
 
 ![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-1.png)<!-- -->![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-2.png)<!-- -->
