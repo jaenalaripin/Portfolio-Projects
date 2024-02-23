@@ -510,7 +510,7 @@ This chart show us clearer information about distribution of Cyclistic
 transaction in 2019. Most transactions have been done between April and
 October.
 
-![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20transactions-1.png)<!-- -->
+![](https://i.imgur.com/y8OwNri.png)<!-- -->
 
 November is the last month of the autumn season. The air starts cooling
 down and makes bike riding not the best option for commuting. Based on
@@ -530,7 +530,7 @@ We know what months the users mainly use the app. This chart will show
 us the difference between annual members’ and casual users’ behavior
 based on time.
 
-![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-1.png)<!-- -->![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/heatmap%20of%20Time-2.png)<!-- -->
+![](https://i.imgur.com/IaHULAh.png)<!-- -->![](https://i.imgur.com/AoKwvlQ.png)<!-- -->
 
 Annual members mainly use Cyclistic on the weekdays at 07:00-08:00 and
 16:00-19:00, while casual users mainly use the app on the weekends at
@@ -544,7 +544,7 @@ casual users are vary.
 This chart will inform us about the age distribution between the two
 types of users.
 
-![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/distributions%20of%20users%20age-1.png)<!-- -->
+![](https://i.imgur.com/Uv2lfoK.png)<!-- -->
 
 Both types of users have the same age distribution. Most Cyclistic users
 are aged between 25 - 35.
@@ -553,7 +553,7 @@ are aged between 25 - 35.
 
 This chart shows us average ride duration of the users.
 
-![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/tripduration-1.png)<!-- -->
+![](https://i.imgur.com/iJQN94F.png)<!-- -->
 
 Although casual users use the app less frequently than annual members,
 they ride the bike longer. Most annual members are workers; they use
@@ -568,7 +568,7 @@ the riding for longer time in a day.
 We use treemap chart to show the distribution of genders. To perform
 this action, we need `treemapify` package.
 
-![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/treemap%20of%20genders-1.png)<!-- -->
+![]([Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/treemap%20of%20genders-1.png](https://i.imgur.com/yZuS4Ir.png))<!-- -->
 
 Both types of users have males doing more transactions than females,
 especially for annual members. Riding bikes is not the best option for
