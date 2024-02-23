@@ -45,8 +45,7 @@ We downloaded the previous 12 months of Cyclistic trip data
 datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study, the datasets are appropriate and will enable us to answer the business questions. The data has been made
 available by Motivate International Inc. under this
 [license](https://divvybikes.com/data-license-agreement).) We downloaded
-only the data sets from 2019. The data are divided into 4 quarters per
-year (Q1, Q2, Q3, and Q4).
+only the data sets from 2019. The data are divided into 4 quarters (Q1, Q2, Q3, and Q4).
 
 <a id="cell3"></a>
 
@@ -56,10 +55,9 @@ year (Q1, Q2, Q3, and Q4).
 
 Our datasets are not clean. We have to perform some cleaning and
 manipulation processes so they can be used for further analysis.
-
 We use RStudio to perform all the processes, from importing, cleaning,
 analyzing, visualizing, and reporting. First step is the importing
-process. Here, we prepare the data we want to use for analysis. The
+process. Here, we prepare the data we want to use for the analysis. The
 datasets are divided into 4 separate files. We use `read_csv` function
 from `readr` package to import external csv files. Here is the code to
 import all of them:
@@ -74,9 +72,7 @@ bike20194 <- read_csv("F:/Data Analytics/Case Studies/Bike Share/R/Divvy_Trips_2
 
 ### 3.2. Cleaning Data Sets
 
-These four files need to be merged into one data set for further
-analysis. Before that, we need to check the preview of each data set
-with `glimpse` function from the `dplyr` package.
+These four files need to be merged into one dataset for further analysis. Before that, we need to check the preview of each data set with `glimpse` function from the `dplyr` package to see if they have the same numbers of columns and data types.
 
 ``` r
 library(dplyr)
@@ -155,11 +151,7 @@ glimpse(bike20194)    #checking the structure of Q4 data set
     ## $ gender            <chr> "Male", "Male", "Female", "Male", "Male", "Female", …
     ## $ birthyear         <dbl> 1987, 1998, 1991, 1990, 1987, 1994, 1991, 1995, 1993…
 
-All data sets consist of twelve columns, all the columns from all the dataeets are the same, but we see that only the Q2 that contains different column
-names, which does not allow us to join them. Q2 dataset has
-column names with spaces and capital letters. We need to perform
-`clean_names` function from `janitor` package to transform the column
-names.
+All data sets consist of twelve columns and all the columns from all the datasets are the same, but we see that only the Q2 that contains different column names, which does not allow us to join them. Q2 dataset has column names with spaces and capital letters. We need to perform `clean_names` function from `janitor` package to transform the column names.
 
 ``` r
 library(janitor)                          #loading janitor package to perform rename_with function
