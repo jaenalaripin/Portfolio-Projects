@@ -538,8 +538,7 @@ and it makes bike riding not the best option for commuting. Based on
 the chart, casual users started not to use Cyclistic as their main
 option, but we see there are still lots of transactions made by the
 annual members even until the end of the year. Annual members pay the
-membership so they can use Cyclistic throughout the year, so they do not
-want to miss their opportunity to leverage the benefits of the package
+membership and they do not want to miss their opportunity to leverage the benefits of the package
 they bought. Even in January-April, when the winter occurs, there are
 still a few transactions made. Casual users only pay for the service
 either for single-ride passes or full-day passes. When the winter comes,
@@ -555,8 +554,8 @@ based on time.
 
 Annual members mainly use Cyclistic on the weekdays at 07:00-08:00 and
 16:00-19:00, while casual users mainly use the app on the weekends at
-09:00-19:00. This tells us that most annual members use Cyclistic for
-commuting to work, while casual users mainly use Cyclistic for other
+09:00-19:00. This tells us that most annual members use Cyclistic to
+commute to work, while casual users mainly use Cyclistic for other
 purposes. We can say that Cyclistic members are mainly workers, while
 casual users are vary.
 
@@ -577,9 +576,8 @@ This chart shows us average ride duration of the users.
 ![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/tripduration-1.png)<!-- -->
 
 Although casual users use the app less frequently than annual members,
-they ride the bike longer. Most annual members are workers; they use
-Cyclistic mainly to commute to or from work. They ride bikes almost
-daily, but the length or duration is shorter than the casual users do.
+they ride the bike longer. Most annual members are workers; They ride bikes almost
+daily, but the length or duration is shorter than the casual users.
 Casual users ride bikes for farther distance, because they pay the
 service for just one day or single trip, they leverage the benefits of
 the riding for longer time in a day.
@@ -597,9 +595,8 @@ this action, we need `treemapify` package.
 Both types of users have males doing more transactions than females,
 especially for annual members. Riding bikes is not the best option for
 females to commute to work because it is tiring and makes them sweat.
-Females pay more attention to their appearance than males. Males also
-work in more sectors than females. Females mostly are white-collar
-workers, while some males also work as blue-collar workers.
+Females pay more attention to their appearances than males. Males also
+work in more sectors than females. Females mostly are white-collars, while some males also work as blue-collars.
 
 <a id="cell6"></a>
 
