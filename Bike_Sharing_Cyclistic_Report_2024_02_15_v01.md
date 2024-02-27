@@ -280,12 +280,14 @@ bike2019 <-
 Next, we look for the duplicates and typos using this code:
 
 ``` r
-kable(sum(duplicated(bike2019)))                #checking duplicates
+kable(data.frame(duplicates = sum(duplicated(bike2019))))     #checking duplicates
+kable(head(bike2019 %>% distinct(usertype)))                  #checking values in usertype column
+kable(head(bike2019 %>% distinct(gender)))                    #checking values in gender column
 ```
 
-|   x |
-|----:|
-|   0 |
+| duplicates |
+|------------|
+|   0        |
 
 ``` r
 kable(head(bike2019 %>% distinct(usertype)))                 #checking values in usertype column
@@ -306,7 +308,7 @@ kable(head(bike2019 %>% distinct(gender)))                    #checking values i
 | Female |
 | NA     |
 
-* There are no duplicates in **trip_id** column.
+* There are no duplicates in the dataset.
 * There are two types of users in **usertype**, which are *customer* and *subscriber*.
 * There are null values in **gender** column.
 
