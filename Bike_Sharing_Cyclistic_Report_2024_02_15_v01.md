@@ -588,9 +588,6 @@ the riding for longer time in a day.
 We use treemap chart to show the distribution of genders. To perform
 this action, we need `treemapify` package.
 
-    ## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-    ## family not found in Windows font database
-
 ![](Bike_Sharing_Cyclistic_Report_2024_02_15_v01_files/figure-gfm/treemap%20of%20genders-1.png)<!-- -->
 
 Both types of users have males doing more transactions than females,
