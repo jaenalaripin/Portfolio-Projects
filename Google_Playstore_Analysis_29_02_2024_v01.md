@@ -1,5 +1,15 @@
 Google Play Store Analysis
 ================
+![](https://i.imgur.com/kHOmlzD.png)
+
+There are tons of applications like games, social media, productivity
+apps, and more that can be found on the Google Play Store. Starting from
+indie apps until apps that created by big companies. Google Play
+distributes more apps than the Apple Appstore does. It’s because the
+global user base for Android surpasses 3.5 billion, while iOS boasts
+more than 1.3 billion users. People can use Android on more than one
+device or brand, unlike iOS, which only can be used on Apple devices. It
+makes the market bigger.
 
 ## Table of Contents
 
@@ -13,18 +23,7 @@ Google Play Store Analysis
 
 ## 1. Ask <a id="cell1"></a>
 
-![](https://i.imgur.com/kHOmlzD.png)
-
-There are tons of applications like games, social media, productivity
-apps, and more that can be found on the Google Play Store. Starting from
-indie apps until apps that created by big companies. Google Play
-distributes more apps than the Apple Appstore does. It’s because the
-global user base for Android surpasses 3.5 billion, while iOS boasts
-more than 1.3 billion users. People can use Android on more than one
-device or brand, unlike iOS, which only can be used on Apple devices. It
-makes the market bigger.
-
-The bigger the market, means the more people making apps. If we want to
+The bigger the market, means the more people developing apps. If we want to
 develope an app, Choosing the right market will help us growing faster.
 In this analysis, we want to answer some questions like:
 
