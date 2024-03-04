@@ -3,7 +3,7 @@ Google Play Store Analysis
 
 ## 1. Ask
 
-![](https://media.cnn.com/api/v1/images/stellar/prod/231219064524-google-play-photo-illustration.jpg)
+![](https://i.imgur.com/kHOmlzD.png)
 
 There are tons of applications like games, social media, productivity
 apps, and more that can be found on the Google Play Store. Starting from
