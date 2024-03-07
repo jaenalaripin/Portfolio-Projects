@@ -350,11 +350,11 @@ bike2019 <-                            #excluding null from the data set
 ### 4.1. Adding Days, Months, and Age Columns
 
 Creating new columns like **days**, **months**, and **ages** will help
-us understand the data better. 
+us understand more about the data. 
 
-* **days** column, we can observe on which days people usually use Cyclistic.
+* **days** column, we can observe on which days people mainly use Cyclistic.
 * **ages** column, we can show the distribution of age groups. 
-* **months** column to see the throughout the year.
+* **months** column to see the numbers of transaction throughout the year.
 
 We create these columns with `mutate` function from the `dplyr` package and use
 the `lubridate` package to extract months and days from the
