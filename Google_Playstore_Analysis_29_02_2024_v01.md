@@ -941,7 +941,7 @@ None of the apps use the *Paid* payment type. We don’t know if the apps
 have other payment systems, such as in-app purchases for example. The
 data set does not provide any data about it. But, using the *Pay* before
 download will not be the best option to choose. We can consider to earn
-money from other sources, like from ads, premium membership, selling
+money from other sources, like ads, premium membership, selling
 in-app items, etc.
 
 ## 6. Key Findings <a id="cell6"></a>
