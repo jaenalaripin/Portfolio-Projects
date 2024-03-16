@@ -379,7 +379,7 @@ kable(head(bike2019 %>% select(ages, days, months)))           #preview of the n
 |   30 | Tue  | Jan    |
 |   41 | Tue  | Jan    |
 
-### 4.2. Calculating Total Transactions by Months
+### 4.2. Calculating Total Transactions by Month
 
 Calculating total transactions by months and days allows us to plot them
 into distribution charts, like histogram. We create a new table with
@@ -403,9 +403,9 @@ kable(head(biketransactionheatmap))
 | Annual Member | Jan    | Thu  | 19493 |
 | Annual Member | Jan    | Fri  | 18194 |
 
-### 4.3. Calculating Total Duration Users Spent on Riding Bike
+### 4.3. Calculating Average Duration Users Spent on Riding Bikes
 
-Calculating this variable allows us to compare the total durations of these two user types. We use this code to perform the calculation:
+Calculating this variable allows us to compare the average durations of these two user types. We use this code to perform the calculation:
 
 ``` r
 bike2019durationday <-                        #calculating average trip duration by days
