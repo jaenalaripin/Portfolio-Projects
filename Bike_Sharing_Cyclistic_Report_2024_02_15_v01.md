@@ -630,8 +630,6 @@ work in more sectors than females. Females mostly are white-collars, while some 
 Here are three recommendations that marketing team can use to boost
 Cyclistic transaction in the future:
 
-Here are three recommendations that marketing team can use to boost Cyclistic transaction in the future:
-
 * Perform promotions between April and October or spring and summer. People will use Cyclistic more during those time ranges.
 * Make workers the main target of ads. They use Cyclistic more often and earn the company more money.
 * Males ride bikes more often than females; the ads should be more targeted at males because they tend to easily become annual members. 
