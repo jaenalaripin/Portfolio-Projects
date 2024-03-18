@@ -47,19 +47,19 @@ We use Microsoft SQL Server for this analysis. Before we start importing
 the dataset, we need to create a new database first. In this analysis,
 the new database name would be ‘NetflixMovies’.
 
-![](images\Importing%20Data%20Set%2001.png)
+![](images\Importing%20Data%20Set%2001.png)<!-- -->
 
 After the new database has been created, we can import the dataset using
 SQL Server Import and Export Data. We can open this window by right
 click the database name NetflixMovies and then dropdown menu will show,
 choose Task \> Import Data
 
-![](images\Importing%20Data%20Set%2002.png)
+![](images\Importing%20Data%20Set%2002.png)<!-- -->
 
 Then, we choose Flat File Source, then browse the dataset, and choose
 netflix_titles.csv
 
-![](images\Importing%20Data%20Set%2003.png)
+![](images\Importing%20Data%20Set%2003.png)<!-- -->
 
 ## 3. Cleaning
 
@@ -72,7 +72,7 @@ analysis.
 
 First, we need to cast the column first with this query below.
 
-![](images\Cleaning%2001.png)
+![](images\Cleaning%2001.png)<!-- -->
 
 We see that there are some rows in the date_added column that contain
 empty values. When the empty values are converted into the date data
@@ -84,17 +84,18 @@ After did some observations regarding the netflix series or movies added
 date, we can write the query below to update the table, so the empty
 values can be filled with the correct information.
 
-![](images\Cleaning%2002.png)
+![](images\Cleaning%2002.png)<!-- -->
 
-![](images\Cleaning%2003.png)
+![](images\Cleaning%2003.png)<!-- -->
 
 All the empty cells have been filled. Now, we can convert the date_added
 column data type from string to date using this query.
 
-![](images\Cleaning%2004.png)
-![](images\Cleaning%2005.png)
+![](images\Cleaning%2004.png)<!-- -->
 
-![](images\Cleaning%2006.png)
+![](images\Cleaning%2005.png)<!-- -->
+
+![](images\Cleaning%2006.png)<!-- -->
 
 Now, the date_added column is clean. We can move to other colum to
 perform a similar action.
@@ -105,24 +106,24 @@ perform a similar action.
 
 The director column also has missing values, based on this query,
 
-![](images\Cleaning%2007.png)
+![](images\Cleaning%2007.png)<!-- -->
 
 it returns the 2633 missing values
 
-![](images\Cleaning%2008.png)
+![](images\Cleaning%2008.png)<!-- -->
 
-![](images\Cleaning%2009.png)
+![](images\Cleaning%2009.png)<!-- -->
 
 We did some observation on the internet, and fill the missing values in
 the column with UPDATE clause.
 
-![](images\Cleaning%2010.png)
+![](images\Cleaning%2010.png)<!-- -->
 
 ### 3.3. country Column
 
 #### 3.3.1. Filling Missing Values
 
-![](images\Cleaning%2011.png)
+![](images\Cleaning%2011.png)<!-- -->
 
 ### 3.4. duration Column
 
@@ -130,14 +131,14 @@ duration column has a string data type, but an integer or numeric type
 for these values is more suitable for further analysis. We want to
 convert these values from string to numeric data type.
 
-![](images\Cleaning%2012.png)
+![](images\Cleaning%2012.png)<!-- -->
 
 Instead of converting the column, we want to split duration column into
 two columns, duration_minutes and seasons columns. The duration_minutes
 column is made for the values that contain ‘min’, and seasons column is
 made for the values that contain ‘Season’ or ‘Seasons’.
 
-![](images\Cleaning%2013.png)
+![](images\Cleaning%2013.png)<!-- -->
 
 Below is the query to split the values from duration column to the two
 new columns, duration_minutes and seasons.
@@ -150,7 +151,7 @@ duration_minutes column is the correct column to contain these values.
 So, to make the dataset tidier, we need to move them from the rating to
 the duration_minutes column. We write this query to move the values.
 
-![](images\Cleaning%2014.png)
+![](images\Cleaning%2014.png)<!-- -->
 
 Now, all the misinput values have been moved to the correct column.
 Unfortunately, there are also some shows that have empty values in the
@@ -158,16 +159,16 @@ rating column. We need to fill those empty cells with the correct
 values. We did an observation on the internet about the content rating
 of those shows. Then, we write this query to fill in the empty cells.
 
-![](images\Cleaning%2015.png)
+![](images\Cleaning%2015.png)<!-- -->
 
 ### 3.6. Checking for Duplicates
 
 Now we want to know if the dataset have duplicates, we write this query
 to return duplicated rows
 
-![](images\Cleaning%2016.png)
+![](images\Cleaning%2016.png)<!-- -->
 
-![](images\Cleaning%2017.png)
+![](images\Cleaning%2017.png)<!-- -->
 
 There is no duplicated rows in the dataset. Now, all the values in the
 data set are clean and ready to be used for further analysis.
@@ -183,7 +184,7 @@ In this analysis, we want to count the numbers of show per type. There
 are two types of shows in the dataset, Movie and TV Show. We write this
 query to perform the aggregation.
 
-![](images\Analysis%2001.png)
+![](images\Analysis%2001.png)<!-- -->
 
 ### 4.2. Counting Total Shows Per Genre
 
@@ -192,9 +193,9 @@ TV show, they have several genres listed in. Here, we want to count the
 numbers of genres and also count the numbers of shows listed in each
 genre. We write this query to perform this aggregation.
 
-![](images\Analysis%2002.png)
+![](images\Analysis%2002.png)<!-- -->
 
-![](images\Analysis%2003.png)
+![](images\Analysis%2003.png)<!-- -->
 
 There are 42 different genres based on the query result.
 
@@ -204,14 +205,14 @@ We perform an aggregation to know how many shows added per year, either
 they are movies or TV shows. We grouped the total shows based on show
 type and the year added.
 
-![](images\Analysis%2004.png)
+![](images\Analysis%2004.png)<!-- -->
 
 ### 4.4. Counting Total Shows Produced by Country
 
 In this analysis, we want to know the numbers of total shows produced by
 country. We write this query to perform the aggregation.
 
-![](images\Analysis%2005.png)
+![](images\Analysis%2005.png)<!-- -->
 
 Movies or TV shows that we can watch on Netflix are produced by those
 120 countries. The country that produced most of the show was United
@@ -229,7 +230,7 @@ number of shows classified for each content rating.
 
 We write this query to perform the aggregation.
 
-![](images\Analysis%2006.png)
+![](images\Analysis%2006.png)<!-- -->
 
 There are 24 different content ratings on Netflix. Most of the movies
 and TV shows are TV-MA rated. TV-MA or Mature Audience is specifically
@@ -244,7 +245,7 @@ than three hours long, it depends. We will aggregate the dataset and
 count the total shows based on their minutes duration. We use the query
 below to perform the aggregation.
 
-![](images\Analysis%2007.png)
+![](images\Analysis%2007.png)<!-- -->
 
 ### 4.7. Distribution of TV Serial Seasons
 
@@ -254,7 +255,7 @@ seasons. When the serials are popular, they usually will have another
 season. The numbers of seasons indicate how popular the series are. We
 use this query to perform the aggregation.
 
-![](images\Analysis%2008.png)
+![](images\Analysis%2008.png)<!-- -->
 
 ## 5. Visualizations
 
