@@ -276,14 +276,6 @@ We made the visualizations in Tableau Public. Click this [link](https://public.t
 <param name='display_count' value='yes' />
 <param name='language' value='en-US' />
 </object></div>                
-<script type='text/javascript'>                    
-var divElement = document.getElementById('viz1710756884293');                    
-var vizElement = divElement.getElementsByTagName('object')[0];                    
-vizElement.style.width='1366px';vizElement.style.height='1000px';                    
-var scriptElement = document.createElement('script');                    
-scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-</script>
 
 ##### SQL code
 
