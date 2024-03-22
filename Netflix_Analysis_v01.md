@@ -259,20 +259,14 @@ use this query to perform the aggregation.
 
 ## 5. Visualizations
 
-We made the visualizations in Tableau Public, like the dashboard we can
-see below.
+We made the visualizations in Tableau Public. Click this [link](https://public.tableau.com/app/profile/jaenal.aripin/viz/NetflixMoviesandTVShows_17098862814500/Dashboard2) to access the dashboard.
 
-<div id="viz1710756884293" class="tableauPlaceholder"
-style="position: relative">
 
+<div class='tableauPlaceholder' id='viz1710756884293' style='position: relative'>
 <noscript>
 <a href='#'>
-<img alt='Netflix Shows ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;NetflixMoviesandTVShows_17098862814500&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
-</noscript>
-<object class="tableauViz" style="display:none;">
-<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-<param name='embed_code_version' value='3' />
-<param name='site_root' value='' />
+<img alt='Netflix Shows ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;NetflixMoviesandTVShows_17098862814500&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
 <param name='name' value='NetflixMoviesandTVShows_17098862814500&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' />
 <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;NetflixMoviesandTVShows_17098862814500&#47;Dashboard2&#47;1.png' />
 <param name='animate_transition' value='yes' />
@@ -281,9 +275,15 @@ style="position: relative">
 <param name='display_overlay' value='yes' />
 <param name='display_count' value='yes' />
 <param name='language' value='en-US' />
-</object>
-
-</div>
+</object></div>                
+<script type='text/javascript'>                    
+var divElement = document.getElementById('viz1710756884293');                    
+var vizElement = divElement.getElementsByTagName('object')[0];                    
+vizElement.style.width='1366px';vizElement.style.height='1000px';                    
+var scriptElement = document.createElement('script');                    
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+</script>
 
 ##### SQL code
 
